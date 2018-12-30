@@ -5,9 +5,9 @@
   </h1>
 </div>
 <div style="text-align:center">
-  <button class="button button1">Tour of Heroes</button>
-  <button class="button button2">invoice</button>
-  <button class="button button3">invoice attestation</button>
-  <button class="button button4">people list</button>
+  <button class="button" (click)="onTourOfHeroesButtonClick()">Tour Of Heroes</button>
+  <button class="button"(click)="onInvoiceAttestationClick()">Invoice Attestation </button>
+  <button class="button"(click)="onStarWarsClick()">Star Wars</button>
+  <button class="button"(click)="onOthersClick()">Others</button>
 </div>
 <router-outlet></router-outlet>
