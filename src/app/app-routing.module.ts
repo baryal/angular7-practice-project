@@ -22,7 +22,12 @@ const routes: Routes = [
     path: '',
     redirectTo: 'hero',
     pathMatch: 'full'
-  }
+  },
+{
+     path: 'order',
+    loadChildren:'src/app/order/order.module#OrderModule'
+
+}
 ];
 
 @NgModule({
