@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   }
 
   onTourOfHeroesButtonClick() {
-    this.router.navigate(['/hero']);
+    this.router.navigate(['/tour-of-heroes']);
     
   }
   onInvoiceAttestationClick(){

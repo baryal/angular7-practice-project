@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 //the lazy loading syntax uses loadChildren followed by a string that is the relative path to the module, a hash mark or #, and the module’s class name./
 const routes: Routes = [
     {
-    path: 'hero',
+    path: 'tour-of-heroes',
     loadChildren:'./tour-of-heroes/tour-of-heroes.module#TourOfHeroesModule'
   },
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
 },
 {
     path: '',
-    redirectTo: 'hero',
+    redirectTo: 'tour-of-heroes',
     pathMatch: 'full'
   },
 {
