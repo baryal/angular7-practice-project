@@ -3,12 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { TourOfHerosRoutingModule } from './tour-of-heroes-routing.module';
 import { HeroListComponent } from './hero-list/hero-list.component';
-
+import { HeroesComponent } from './heroes/heroes.component';
+import { HttpClientModule }    from '@angular/common/http';
+import { HeroService } from "src/app/tour-of-heroes/hero.service";
+import { HeroesDetailsComponent } from './heroes-details/heroes-details.component';
 @NgModule({
-  declarations: [HeroListComponent],
+  declarations: [HeroListComponent, HeroesComponent, HeroesDetailsComponent],
   imports: [
     CommonModule,
-    TourOfHerosRoutingModule
-  ]
+    TourOfHerosRoutingModule,
+    HttpClientModule
+  ],
+  providers: [HeroService]
 })
 export class TourOfHeroesModule { }
