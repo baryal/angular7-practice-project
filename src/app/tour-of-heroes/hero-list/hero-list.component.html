@@ -1,2 +1,6 @@
 <h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<div style="text-align:center">
+  <a routerLink = "/tour-of-heroes/heroes" routerLinkActive = "active" style="margin: 10px;">Heroes</a>
+  <a routerLink = "/tour-of-heroes/dashboard" routerLinkActive = "active" style="margin: 10px;">Dashboard</a>
+</div>
+<router-outlet></router-outlet>
