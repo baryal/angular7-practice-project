@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { TourOfHerosRoutingModule } from './tour-of-heroes-routing.module';
 import { HeroListComponent } from './hero-list/hero-list.component';
@@ -13,7 +14,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     CommonModule,
     TourOfHerosRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HeroService]
 })

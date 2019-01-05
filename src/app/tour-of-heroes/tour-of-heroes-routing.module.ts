@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {HeroListComponent} from'./hero-list/hero-list.component';
 import { HeroesComponent } from "src/app/tour-of-heroes/heroes/heroes.component";
 import { DashboardComponent } from "src/app/tour-of-heroes/dashboard/dashboard.component";
-
+import { HeroesDetailsComponent } from './heroes-details/heroes-details.component';
 
 const routes: Routes = [
   {
@@ -21,11 +21,17 @@ const routes: Routes = [
         component: DashboardComponent
 
       },
+
+      { 
+        path: 'detail/:id', 
+        component: HeroesDetailsComponent
+      },
       {
         path: '',
         redirectTo: 'heroes',
         pathMatch: 'full'
-      }
+      },
+      
     ]
   }
 ];
