@@ -4,6 +4,10 @@ import {HeroListComponent} from'./hero-list/hero-list.component';
 import { HeroesComponent } from "src/app/tour-of-heroes/heroes/heroes.component";
 import { DashboardComponent } from "src/app/tour-of-heroes/dashboard/dashboard.component";
 import { HeroesDetailsComponent } from './heroes-details/heroes-details.component';
+import { CrisisCenterComponent } from "src/app/tour-of-heroes/crisis-center/crisis-center/crisis-center.component";
+import { CrisisListComponent } from "src/app/tour-of-heroes/crisis-center/crisis-list/crisis-list.component";
+import { CrisisDetailsComponent } from "src/app/tour-of-heroes/crisis-center/crisis-details/crisis-details.component";
+import { CrisisCenterHomeComponent } from "src/app/tour-of-heroes/crisis-center/crisis-center-home/crisis-center-home.component";
 
 const routes: Routes = [
   {
@@ -31,7 +35,26 @@ const routes: Routes = [
         redirectTo: 'heroes',
         pathMatch: 'full'
       },
-      
+      {
+        path: 'crisis-center',
+        component: CrisisCenterComponent, 
+        children: [
+          {
+            path: '',
+            component: CrisisListComponent,
+            children: [
+              {
+                path: ':id',
+                component: CrisisDetailsComponent
+              },
+              {
+                path: '',
+                component: CrisisCenterHomeComponent
+              }
+            ]
+          } 
+        ]
+      }
     ]
   }
 ];
