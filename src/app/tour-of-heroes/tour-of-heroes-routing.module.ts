@@ -8,6 +8,8 @@ import { CrisisCenterComponent } from "src/app/tour-of-heroes/crisis-center/cris
 import { CrisisListComponent } from "src/app/tour-of-heroes/crisis-center/crisis-list/crisis-list.component";
 import { CrisisDetailsComponent } from "src/app/tour-of-heroes/crisis-center/crisis-details/crisis-details.component";
 import { CrisisCenterHomeComponent } from "src/app/tour-of-heroes/crisis-center/crisis-center-home/crisis-center-home.component";
+import { AdminComponent } from "src/app/tour-of-heroes/admin/admin.component";
+import { AuthGuard } from "src/app/tour-of-heroes/auth.guard";
 
 const routes: Routes = [
   {
@@ -18,6 +20,12 @@ const routes: Routes = [
         path: 'heroes',
         component: HeroesComponent
 
+      
+      },
+      {
+        path: 'admin',
+        component: AdminComponent,
+        canActivate: [AuthGuard]
       
       },
       {
