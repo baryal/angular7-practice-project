@@ -17,7 +17,6 @@ getCrises() {
   this.crisisService.getCrises()
       .subscribe(crises => {
         this.crises = crises;
-        console.log(crises);
       });
 
 }

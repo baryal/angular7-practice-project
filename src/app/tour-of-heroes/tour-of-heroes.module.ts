@@ -14,8 +14,9 @@ import { CrisisListComponent } from './crisis-center/crisis-list/crisis-list.com
 import { CrisisDetailsComponent } from './crisis-center/crisis-details/crisis-details.component';
 import { CrisisCenterHomeComponent } from './crisis-center/crisis-center-home/crisis-center-home.component';
 import { CrisisService } from "src/app/tour-of-heroes/crisis-center/crisis.service";
+import { AdminComponent } from './admin/admin.component';
 @NgModule({
-  declarations: [HeroListComponent, HeroesComponent, HeroesDetailsComponent, DashboardComponent, CrisisCenterComponent, CrisisListComponent, CrisisDetailsComponent, CrisisCenterHomeComponent],
+  declarations: [HeroListComponent, HeroesComponent, HeroesDetailsComponent, DashboardComponent, CrisisCenterComponent, CrisisListComponent, CrisisDetailsComponent, CrisisCenterHomeComponent, AdminComponent],
   imports: [
     CommonModule,
     TourOfHerosRoutingModule,
