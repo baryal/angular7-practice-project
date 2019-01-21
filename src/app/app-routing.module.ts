@@ -4,19 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
     {
     path: 'tour-of-heroes',
-    loadChildren:'./tour-of-heroes/tour-of-heroes.module#TourOfHeroesModule'
+    loadChildren:'./modules/tour-of-heroes/tour-of-heroes.module#TourOfHeroesModule'
   },
   {
     path:'starwars',
-  loadChildren:'src/app/star-wars/star-wars.module#StarWarsModule'
+  loadChildren:'src/app/modules/star-wars/star-wars.module#StarWarsModule'
 },
 {
   path:'others',
-  loadChildren:'src/app/others/others.module#OthersModule'
+  loadChildren:'src/app/modules/others/others.module#OthersModule'
 },
 {
   path:'invoice',
-  loadChildren: 'src/app/invoice-attestation/invoice-attestation.module#InvoiceAttestationModule'
+  loadChildren: 'src/app/modules/invoice-attestation/invoice-attestation.module#InvoiceAttestationModule'
 },
 {
     path: '',
@@ -25,9 +25,13 @@ const routes: Routes = [
   },
 {
      path: 'order',
-    loadChildren:'src/app/order/order.module#OrderModule'
+    loadChildren:'src/app/modules/order/order.module#OrderModule'
 
-}
+},
+  {
+    path :'authenticate',
+    loadChildren: 'src/app/modules/authentication/authentication.module#AuthenticationModule'
+} 
 ];
 
 @NgModule({
