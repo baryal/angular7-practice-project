@@ -1,3 +1,10 @@
-<p>
-  login works!
-</p>
+<form>
+  Email:
+  <input type="text" name="email" #email><br>
+  Password:
+  <input type="text" name="password" #password>
+</form>
+<button class="button"(click)="onLoginClick(email.value,password.value)">Login</button>
+<div>
+<a routerLink = "/authentication/register" routerLinkActive = "active" style= "margin: 10px;">NeedToregister</a>
+</div>
