@@ -8,12 +8,14 @@ import { LoginSuccessComponent } from './login-success/login-success.component';
 import { AuthenticationService } from "src/app/modules/authentication/authentication.service";
 import { HttpClientModule }    from '@angular/common/http';
 import { AuthGuard } from "src/app/modules/authentication/auth.guard";
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, AuthenticationComponent, LoginSuccessComponent],
   imports: [
     CommonModule,
     AuthenticationRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [AuthenticationService, AuthGuard]
 })

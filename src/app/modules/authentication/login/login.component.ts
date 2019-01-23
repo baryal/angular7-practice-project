@@ -8,11 +8,12 @@ import { AuthenticationService } from "src/app/modules/authentication/authentica
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  users: User;
+  user: User;
        
   constructor(private authenticationService:AuthenticationService, private router: Router){ }
 
   ngOnInit() {
+    this.user = new User();
   }
 
   onLoginClick(email:string,password:string) {
@@ -21,6 +22,13 @@ export class LoginComponent implements OnInit {
           this.authenticationService.isLoggedIn = true;
           this.router.navigate(['/authentication/login-success']);
     });
-
+  }
+  
+  login(){
+    this.authenticationService.login(this.user.email, this.user.password)
+        .subscribe(user => {
+          this.authenticationService.isLoggedIn = true;
+          this.router.navigate(['/authentication/login-success']);
+    });
   }
 }
