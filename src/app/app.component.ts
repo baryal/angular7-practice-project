@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+// test
 export class AppComponent implements OnInit{
   title = 'the Angular 7 practice project!!';
 
